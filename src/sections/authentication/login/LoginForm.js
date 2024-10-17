@@ -51,9 +51,9 @@ export default function LoginForm() {
         <Stack spacing={3}>
           <TextField
             fullWidth
-            autoComplete="username"
+            // autoComplete="username"
             type="email"
-            label="Email address"
+            label="Adresse email"
             {...getFieldProps('email')}
             error={Boolean(touched.email && errors.email)}
             helperText={touched.email && errors.email}
@@ -61,9 +61,9 @@ export default function LoginForm() {
 
           <TextField
             fullWidth
-            autoComplete="current-password"
+            // autoComplete="current-password"
             type={showPassword ? 'text' : 'password'}
-            label="Password"
+            label="Mot de passe"
             {...getFieldProps('password')}
             InputProps={{
               endAdornment: (
@@ -86,7 +86,7 @@ export default function LoginForm() {
           />
 
           <Link component={RouterLink} variant="subtitle2" to="#" underline="hover">
-            Forgot password?
+            Mot de passe oublié?
           </Link>
         </Stack>
 
@@ -97,7 +97,7 @@ export default function LoginForm() {
           variant="contained"
           loading={isSubmitting}
         >
-          Login
+          Se connecter
         </LoadingButton>
       </Form>
     </FormikProvider>
